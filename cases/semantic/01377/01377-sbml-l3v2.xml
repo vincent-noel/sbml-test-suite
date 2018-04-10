@@ -7,14 +7,14 @@
       </compartment>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="J1" compartment="A_C" initialConcentration="5" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+      <species id="J1" compartment="A_C" initialConcentration="5" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="true">
         <comp:listOfReplacedElements>
           <comp:replacedElement comp:idRef="J0" comp:submodelRef="A"/>
         </comp:listOfReplacedElements>
       </species>
     </listOfSpecies>
     <comp:listOfSubmodels>
-      <comp:submodel id="A" comp:id="A" comp:modelRef="sub1"/>
+      <comp:submodel comp:id="A" comp:modelRef="sub1"/>
     </comp:listOfSubmodels>
   </model>
   <comp:listOfModelDefinitions>
