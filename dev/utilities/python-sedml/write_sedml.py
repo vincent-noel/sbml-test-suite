@@ -20,7 +20,7 @@ def setTarget(sbml_model, variable, sbml_variable):
 	elif isinstance(sbml_variable, Reaction):
 		xpath = "/sbml:sbml/sbml:model/sbml:listOfReactions/sbml:reaction"
 	else:
-		print type(sbml_variable)
+		print(type(sbml_variable))
 		raise Exception()
 
 	idref = ""
@@ -39,7 +39,7 @@ for test_case in sorted(listdir(TEST_FILES)):
 	dir = join(TEST_FILES, test_case)
 
 	if not isfile(dir) and test_case != ".":
-		print "\n> %s : " % test_case
+		print("\n> %s : " % test_case)
 
 		versions = []
 		for sbml_file in glob("%s/*-sbml-*.xml" % dir):
@@ -82,7 +82,7 @@ for test_case in sorted(listdir(TEST_FILES)):
 			for level, version in sorted(versions):
 
 				sbml_filename = join(dir, "%s-sbml-l%dv%d.xml" % (test_case, level, version))
-				print sbml_filename
+				print(sbml_filename)
 				sbmlReader = SBMLReader()
 				sbml_doc = sbmlReader.readSBML(sbml_filename)
 				sbml_model = None
